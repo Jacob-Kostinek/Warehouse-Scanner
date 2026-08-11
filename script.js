@@ -6,27 +6,42 @@ fetch("products.json")
     products = data;
   });
 
-function onScanSuccess(barcode) {
-  let product = products.find(p => p.barcode === barcode);
+const barcodeInput = document.getElementById("barcodeInput");
+const result = document.getElementById("result");
 
-  let result = document.getElementById("result");
+barcodeInput.focus();
+
+document.addEventListener("click", function () {
+  barcodeInput.focus();
+});
+
+barcodeInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    const barcode = barcodeInput.value.trim();
+
+    findProduct(barcode);
+
+    barcodeInput.value = "";
+    barcodeInput.focus();
+  }
+});
+
+function findProduct(barcode) {
+  const product = products.find(p => p.barcode === barcode);
 
   if (product) {
     result.innerHTML = `
-      Item: ${product.item}<br>
-      Location: ${product.location}
+      <h2>${product.item}</h2>
+
+      <p>PUT IN:</p>
+
+      <h1>${product.location}</h1>
     `;
   } else {
     result.innerHTML = `
-      Unknown barcode:<br>
-      ${barcode}
+      <h2>Unknown Barcode</h2>
+
+      <p>${barcode}</p>
     `;
   }
 }
-
-let scanner = new Html5QrcodeScanner(
-  "reader",
-  { fps: 10, qrbox: 250 }
-);
-
-scanner.render(onScanSuccess);

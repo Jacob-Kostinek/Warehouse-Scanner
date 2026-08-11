@@ -15,7 +15,118 @@
   <div id="reader"></div>
 
   <div id="result">Scan a barcode...</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Warehouse Scanner</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    #barcodeInput {
+      width: 90%;
+      max-width: 500px;
+      padding: 18px;
+      font-size: 24px;
+      text-align: center;
+      border: 2px solid #999;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    #barcodeInput:focus {
+      border-color: #333;
+    }
+
+    #result {
+      margin-top: 35px;
+      padding: 25px;
+      min-height: 180px;
+      border-radius: 12px;
+      background-color: #eeeeee;
+    }
+
+    #result h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    #result p {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    #result h1 {
+      font-size: 70px;
+      margin: 15px 0;
+    }
+
+    .ready {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 55px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Warehouse Scanner</h1>
+
+    <div class="subtitle">
+      Scan a product barcode to find its location
+    </div>
+
+    <input
+      type="text"
+      id="barcodeInput"
+      placeholder="Scan barcode..."
+      autocomplete="off"
+      autofocus
+    >
+
+    <div id="result">
+      <div class="ready">
+        Ready to Scan...
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
   <script src="script.js"></script>
 </body>
 </html>
