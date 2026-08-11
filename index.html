@@ -6,13 +6,12 @@
 
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    content="width=device-width, initial-scale=1.0"
   >
 
   <title>Warehouse Scanner</title>
 
   <style>
-
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -48,12 +47,7 @@
       border-radius: 12px;
       background-color: #222;
       color: white;
-      cursor: pointer;
       margin-bottom: 25px;
-    }
-
-    #startButton:active {
-      transform: scale(0.98);
     }
 
     #status {
@@ -63,9 +57,10 @@
     }
 
     #barcodeInput {
+      width: 1px;
+      height: 1px;
       position: absolute;
-      left: -9999px;
-      opacity: 0;
+      left: -1000px;
     }
 
     #result {
@@ -78,18 +73,17 @@
 
     #result h2 {
       font-size: 36px;
-      margin-top: 10px;
       margin-bottom: 20px;
     }
 
     #result p {
       font-size: 26px;
-      margin: 10px 0;
     }
 
-    #result h1 {
-      font-size: 85px;
-      margin: 15px 0;
+    #result .location {
+      font-size: 90px;
+      font-weight: bold;
+      margin: 20px;
     }
 
     .ready {
@@ -97,10 +91,9 @@
       font-weight: bold;
       margin-top: 70px;
     }
-
   </style>
-</head>
 
+</head>
 
 <body>
 
@@ -112,31 +105,19 @@
       Scan a product barcode to find its location
     </div>
 
-
     <button id="startButton">
       Start Scanning
     </button>
-
 
     <div id="status">
       Scanner Not Started
     </div>
 
-
-    <!--
-      Hidden textbox.
-
-      The Tera scanner acts like a keyboard and types
-      the barcode into this input.
-    -->
-
     <input
       type="text"
       id="barcodeInput"
       autocomplete="off"
-      inputmode="none"
     >
-
 
     <div id="result">
 
@@ -149,7 +130,161 @@
   </div>
 
 
-  <script src="script.js"></script>
+  <script>
+
+    let products = [];
+    let scanningEnabled = false;
+    let scanTimer;
+
+    const startButton =
+      document.getElementById("startButton");
+
+    const barcodeInput =
+      document.getElementById("barcodeInput");
+
+    const status =
+      document.getElementById("status");
+
+    const result =
+      document.getElementById("result");
+
+
+    // Load products.json
+    fetch("products.json")
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+
+        products = data;
+
+        console.log("Products loaded");
+
+      })
+      .catch(function(error) {
+
+        console.log("Could not load products.json");
+
+        status.innerHTML =
+          "Error Loading Products";
+
+      });
+
+
+    // START SCANNING BUTTON
+    startButton.addEventListener("click", function() {
+
+      scanningEnabled = true;
+
+      startButton.innerHTML =
+        "Scanning Active";
+
+      status.innerHTML =
+        "Scanner Ready";
+
+      result.innerHTML =
+        '<div class="ready">Ready to Scan...</div>';
+
+      barcodeInput.value = "";
+
+      barcodeInput.focus();
+
+    });
+
+
+    // Detect scanner typing
+    barcodeInput.addEventListener("input", function() {
+
+      if (scanningEnabled === false) {
+        return;
+      }
+
+      clearTimeout(scanTimer);
+
+      scanTimer = setTimeout(function() {
+
+        let barcode =
+          barcodeInput.value.trim();
+
+        if (barcode.length > 0) {
+
+          findProduct(barcode);
+
+          barcodeInput.value = "";
+
+          barcodeInput.focus();
+
+        }
+
+      }, 200);
+
+    });
+
+
+    // Also support scanner sending ENTER
+    barcodeInput.addEventListener("keydown", function(event) {
+
+      if (event.key === "Enter") {
+
+        clearTimeout(scanTimer);
+
+        let barcode =
+          barcodeInput.value.trim();
+
+        if (barcode.length > 0) {
+
+          findProduct(barcode);
+
+        }
+
+        barcodeInput.value = "";
+
+        barcodeInput.focus();
+
+      }
+
+    });
+
+
+    function findProduct(barcode) {
+
+      let product = products.find(function(p) {
+
+        return p.barcode.toString().trim()
+          === barcode;
+
+      });
+
+
+      if (product) {
+
+        result.innerHTML =
+          "<h2>" + product.item + "</h2>" +
+          "<p>PUT IN:</p>" +
+          '<div class="location">' +
+          product.location +
+          "</div>" +
+          "<p>Barcode: " +
+          barcode +
+          "</p>";
+
+      }
+
+      else {
+
+        result.innerHTML =
+          "<h2>Unknown Barcode</h2>" +
+          "<p>" +
+          barcode +
+          "</p>";
+
+      }
+
+      barcodeInput.focus();
+
+    }
+
+  </script>
 
 </body>
 
