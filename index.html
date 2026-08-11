@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Warehouse Scanner</title>
-  <script src="https://unpkg.com/html5-qrcode"></script>
-  <style>
-    body { font-family: Arial; padding: 20px; text-align: center; }
-    #reader { width: 300px; margin: auto; }
-    #result { margin-top: 20px; font-size: 24px; font-weight: bold; }
-  </style>
-</head>
-<body>
-  <h1>Warehouse Scanner</h1>
-
-  <div id="reader"></div>
-
-  <div id="result">Scan a barcode...</div>
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  >
 
   <title>Warehouse Scanner</title>
 
   <style>
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
@@ -33,69 +22,85 @@
     }
 
     .container {
-      max-width: 700px;
-      margin: 40px auto;
+      max-width: 750px;
+      margin: 30px auto;
       background-color: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
     .subtitle {
-      font-size: 20px;
+      font-size: 22px;
       margin-bottom: 30px;
     }
 
-    #barcodeInput {
-      width: 90%;
-      max-width: 500px;
-      padding: 18px;
-      font-size: 24px;
-      text-align: center;
-      border: 2px solid #999;
-      border-radius: 10px;
-      outline: none;
+    #startButton {
+      padding: 20px 40px;
+      font-size: 28px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      background-color: #222;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 25px;
     }
 
-    #barcodeInput:focus {
-      border-color: #333;
+    #startButton:active {
+      transform: scale(0.98);
+    }
+
+    #status {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    #barcodeInput {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
     }
 
     #result {
-      margin-top: 35px;
-      padding: 25px;
-      min-height: 180px;
-      border-radius: 12px;
+      margin-top: 25px;
+      padding: 30px;
+      min-height: 220px;
+      border-radius: 15px;
       background-color: #eeeeee;
     }
 
     #result h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
+      font-size: 36px;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
 
     #result p {
-      font-size: 24px;
+      font-size: 26px;
       margin: 10px 0;
     }
 
     #result h1 {
-      font-size: 70px;
+      font-size: 85px;
       margin: 15px 0;
     }
 
     .ready {
-      font-size: 30px;
+      font-size: 34px;
       font-weight: bold;
-      margin-top: 55px;
+      margin-top: 70px;
     }
+
   </style>
 </head>
+
 
 <body>
 
@@ -107,26 +112,45 @@
       Scan a product barcode to find its location
     </div>
 
+
+    <button id="startButton">
+      Start Scanning
+    </button>
+
+
+    <div id="status">
+      Scanner Not Started
+    </div>
+
+
+    <!--
+      Hidden textbox.
+
+      The Tera scanner acts like a keyboard and types
+      the barcode into this input.
+    -->
+
     <input
       type="text"
       id="barcodeInput"
-      placeholder="Scan barcode..."
       autocomplete="off"
-      autofocus
+      inputmode="none"
     >
 
+
     <div id="result">
+
       <div class="ready">
-        Ready to Scan...
+        Press Start Scanning
       </div>
+
     </div>
 
   </div>
 
+
   <script src="script.js"></script>
 
 </body>
-</html>
-  <script src="script.js"></script>
-</body>
+
 </html>
