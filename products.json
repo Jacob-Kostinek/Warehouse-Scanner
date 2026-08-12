@@ -285,6 +285,926 @@
     "location": "A506"
   },
   {
+    "barcode": "4015471126094",
+    "item": "TE 540 3D Matte Black",
+    "location": "B101"
+  },
+  {
+    "barcode": "4015471106614",
+    "item": "TE 340 3D Satin Chrome Look",
+    "location": "B102"
+  },
+  {
+    "barcode": "4015471106638",
+    "item": "TE 340 3D Satin Nickel Look",
+    "location": "B103"
+  },
+  {
+    "barcode": "4015471114213",
+    "item": "TE 340 3D Bronze Finish Dark",
+    "location": "B104"
+  },
+  {
+    "barcode": "4015471126254",
+    "item": "TE 540 3D Satin Nickel",
+    "location": "B201"
+  },
+  {
+    "barcode": "4015471123017",
+    "item": "TE 240 3D Satin Nickel Look",
+    "location": "B201"
+  },
+  {
+    "barcode": "4015471123024",
+    "item": "TE 240 3D Stainless Steel Look",
+    "location": "B202"
+  },
+  {
+    "barcode": "4015471126155",
+    "item": "TE 540 3D Bronze Metallic",
+    "location": "B202"
+  },
+  {
+    "barcode": "4015471128289",
+    "item": "TE 540 3D A8 Satin Nickel Look",
+    "location": "B203"
+  },
+  {
+    "barcode": "4015471128364",
+    "item": "TE 540 3D A8 Satin Nickel",
+    "location": "B204"
+  },
+  {
+    "barcode": "4015471123734",
+    "item": "TE 240 3D Traffic White",
+    "location": "B204"
+  },
+  {
+    "barcode": "4015471126148",
+    "item": "TE 540 3D Rustic Umber",
+    "location": "B205"
+  },
+  {
+    "barcode": "4015471106584",
+    "item": "TE 340 3D Traffic White",
+    "location": "B206"
+  },
+  {
+    "barcode": "4015471122980",
+    "item": "TE 240 3D Polished Brassed",
+    "location": "B301"
+  },
+  {
+    "barcode": "4015471128081",
+    "item": "TE 640 3D A8 Satin Nickel",
+    "location": "B301"
+  },
+  {
+    "barcode": "4015471126179",
+    "item": "TE 540 3D Polished Nickel",
+    "location": "B301"
+  },
+  {
+    "barcode": "4015471128401",
+    "item": "TE 540 3D A8 Rustic Umber",
+    "location": "B302"
+  },
+  {
+    "barcode": "4015471110703",
+    "item": "TE 526 3D Stainless Steel Matte Satin",
+    "location": "B302"
+  },
+  {
+    "barcode": "4015471128067",
+    "item": "TE 640 3D A8 Satin Nickel Look",
+    "location": "B303"
+  },
+  {
+    "barcode": "4015471127268",
+    "item": "TE 240 3D Satin Brassed",
+    "location": "B303"
+  },
+  {
+    "barcode": "4015471128272",
+    "item": "TE 540 3D A8 Satin Chrome Look",
+    "location": "B304"
+  },
+  {
+    "barcode": "4015471128487",
+    "item": "TE 640 3D Bronze Metallic",
+    "location": "B304"
+  },
+  {
+    "barcode": "4015471114572",
+    "item": "TE 527 3D Satin Nickel Look",
+    "location": "B305"
+  },
+  {
+    "barcode": "4015471122799",
+    "item": "TE 541 3D FVZ Traffic White",
+    "location": "B305"
+  },
+  {
+    "barcode": "4015471127336",
+    "item": "TE 640 3D Polished Nickel",
+    "location": "B305"
+  },
+  {
+    "barcode": "4015471122324",
+    "item": "TE 527 3D Polished Brassed",
+    "location": "B306"
+  },
+  {
+    "barcode": "4015471123765",
+    "item": "TE 240 3D Bronze Metallic",
+    "location": "B306"
+  },
+  {
+    "barcode": "4015471126131",
+    "item": "TE 540 3D Traffic White",
+    "location": "B306"
+  },
+  {
+    "barcode": "4015471127411",
+    "item": "TE 640 3D Traffic White",
+    "location": "B401"
+  },
+  {
+    "barcode": "4015471146795",
+    "item": "TE 640 3D A8 BW/1 Matte Black",
+    "location": "B402"
+  },
+  {
+    "barcode": "4015471110758",
+    "item": "TE 645 3D Stainless Steel Look",
+    "location": "B402"
+  },
+  {
+    "barcode": "4015471125615",
+    "item": "TE 645 3D ST Blue Galvanized",
+    "location": "B504"
+  },
+  {
+    "barcode": "4015471119607",
+    "item": "TE 340 3D FZ Blue Galvanized",
+    "location": "B504"
+  },
+  {
+    "barcode": "4015471115678",
+    "item": "TE 526 3D V4A Stainless Steel",
+    "location": "B505"
+  },
+  {
+    "barcode": "4015471128746",
+    "item": "TE 540 3D A8 Energy Satin Chrome Look",
+    "location": "B505"
+  },
+  {
+    "barcode": "4015471093570",
+    "item": "TE 526/527 3D SZ Stainless Steel Untreated",
+    "location": "B506"
+  },
+  {
+    "barcode": "4015471127183",
+    "item": "TE 340 3D Satin Brassed",
+    "location": "C103"
+  },
+  {
+    "barcode": "4015471126247",
+    "item": "TE 540 3D Bronze Finish Dark",
+    "location": "C104"
+  },
+  {
+    "barcode": "4015471125554",
+    "item": "TE 540 3D Satin Chrome Look",
+    "location": "C105"
+  },
+  {
+    "barcode": "4015471106683",
+    "item": "TE 340 3D Bronze Metallic",
+    "location": "C106"
+  },
+  {
+    "barcode": "4015471110864",
+    "item": "TE 527 3D Stainless Steel Look",
+    "location": "C106"
+  },
+  {
+    "barcode": "4015471116088",
+    "item": "Rundkabel 3m TE Energy without finish",
+    "location": "C202"
+  },
+  {
+    "barcode": "4015471123550",
+    "item": "TE 626 3D A8 Stainless Steel Matte Satin",
+    "location": "C203"
+  },
+  {
+    "barcode": "4015471128265",
+    "item": "TE 540 3D A8 Matte Black",
+    "location": "C204"
+  },
+  {
+    "barcode": "4015471127329",
+    "item": "TE 540 3D A8 Polished Nickel",
+    "location": "C205"
+  },
+  {
+    "barcode": "4015471106553",
+    "item": "TE 340 3D Polished Brassed",
+    "location": "C205"
+  },
+  {
+    "barcode": "4015471128494",
+    "item": "TE 640 3D Bronze Finish",
+    "location": "C206"
+  },
+  {
+    "barcode": "4015471122805",
+    "item": "TE 541 3D FVZ Matte Black",
+    "location": "C206"
+  },
+  {
+    "barcode": "4015471122997",
+    "item": "TE 240 3D Polished Nickel",
+    "location": "C206"
+  },
+  {
+    "barcode": "4015471122935",
+    "item": "TE 640 3D BW/20 Blue Galvanized",
+    "location": "C301"
+  },
+  {
+    "barcode": "4015471138158",
+    "item": "TE 541 3D FVZ Bronze Finish Light",
+    "location": "C301"
+  },
+  {
+    "barcode": "4015471128432",
+    "item": "TE 540 3D A8 Bronze Finish Light",
+    "location": "C302"
+  },
+  {
+    "barcode": "4015471128296",
+    "item": "TE 640 3D Satin Chrome",
+    "location": "C302"
+  },
+  {
+    "barcode": "4015471124168",
+    "item": "TE 527 3D Bronze Metallic",
+    "location": "C303"
+  },
+  {
+    "barcode": "4015471128098",
+    "item": "TE 640 3D A8 Satin Chrome",
+    "location": "C303"
+  },
+  {
+    "barcode": "4015471120061",
+    "item": "TE 526 3D Polished Stainless Steel",
+    "location": "C304"
+  },
+  {
+    "barcode": "4015471093426",
+    "item": "Bohrihe TE 526/527 3D without finish",
+    "location": "C304"
+  },
+  {
+    "barcode": "4015471131944",
+    "item": "TE 527 3D Bronze Finish Dark",
+    "location": "C304"
+  },
+  {
+    "barcode": "4015471126223",
+    "item": "TE 540 3D Bronze Finish",
+    "location": "C305"
+  },
+  {
+    "barcode": "4015471120580",
+    "item": "TE 527 3D Matte Black",
+    "location": "C305"
+  },
+  {
+    "barcode": "4015471114206",
+    "item": "TE 340 3D Bronze Finish Light",
+    "location": "C306"
+  },
+  {
+    "barcode": "4015471130848",
+    "item": "TE 645 3D Matte Black",
+    "location": "C306"
+  },
+  {
+    "barcode": "4015471123550",
+    "item": "TE 626 3D A8 Stainless Steel Matte Satin",
+    "location": "C401"
+  },
+  {
+    "barcode": "4015471128180",
+    "item": "TE 640 3D A8 Bronze Finish Light",
+    "location": "C402"
+  },
+  {
+    "barcode": "4015471128753",
+    "item": "TE 540 3D A8 Energy Stainless Steel Look",
+    "location": "C402"
+  },
+  {
+    "barcode": "4015471132101",
+    "item": "TE 527 3D Bronze Finish",
+    "location": "C404"
+  },
+  {
+    "barcode": "4015471130640",
+    "item": "TE 640 3D BW/16 Blue Galvanized",
+    "location": "C404"
+  },
+  {
+    "barcode": "4015471126414",
+    "item": "TE 540 3D Energy Stainless Steel Look",
+    "location": "C404"
+  },
+  {
+    "barcode": "4015471128517",
+    "item": "TE 640 3D Bronze Finish Dark",
+    "location": "C405"
+  },
+  {
+    "barcode": "4015471134044",
+    "item": "TE 541 3D FVZ Bronze Finish",
+    "location": "C405"
+  },
+  {
+    "barcode": "4015471141417",
+    "item": "TE 540 3D Energy Satin Nickel Look",
+    "location": "C505"
+  },
+  {
+    "barcode": "4015471123147",
+    "item": "TE 240 3D Energy Satin Chrome Look",
+    "location": "C506"
+  },
+  {
+    "barcode": "4015471126230",
+    "item": "TE 540 3D Bronze Finish Light",
+    "location": "D101"
+  },
+  {
+    "barcode": "4015471128234",
+    "item": "TE 640 3D Satin Nickel Look",
+    "location": "D101"
+  },
+  {
+    "barcode": "4015471128203",
+    "item": "TE 640 3D A8 Dark Bronze",
+    "location": "D102"
+  },
+  {
+    "barcode": "4015471127473",
+    "item": "TE 640 3D A8 Traffic White",
+    "location": "D102"
+  },
+  {
+    "barcode": "4015471114190",
+    "item": "TE 340 3D Bronze Finish",
+    "location": "D103"
+  },
+  {
+    "barcode": "4015471128302",
+    "item": "TE 640 3D Satin Nickel",
+    "location": "D103"
+  },
+  {
+    "barcode": "4015471122812",
+    "item": "TE 541 3D FVZ Satin Nickel",
+    "location": "D104"
+  },
+  {
+    "barcode": "4015471128425",
+    "item": "TE 540 3D A8 Bronze Finish",
+    "location": "D104"
+  },
+  {
+    "barcode": "4015471128777",
+    "item": "TE 640 3D Energy Stainless Steel Look",
+    "location": "D201"
+  },
+  {
+    "barcode": "4015471128470",
+    "item": "TE 640 3D Rustic Umber",
+    "location": "D201"
+  },
+  {
+    "barcode": "4015471123048",
+    "item": "TE 240 3D Bronze Finish Light",
+    "location": "D202"
+  },
+  {
+    "barcode": "4015471116248",
+    "item": "TE 340 3D Energy Stainless Steel Look",
+    "location": "D202"
+  },
+  {
+    "barcode": "4015471128722",
+    "item": "TE 527 3D Satin Chrome Look",
+    "location": "D202"
+  },
+  {
+    "barcode": "4015471131814",
+    "item": "TE 540 3D Satin Brassed",
+    "location": "D203"
+  },
+  {
+    "barcode": "4015471128449",
+    "item": "TE 540 3D A8 Bronze Finish Dark",
+    "location": "D204"
+  },
+  {
+    "barcode": "4015471123741",
+    "item": "TE 240 3D Matte Black",
+    "location": "D204"
+  },
+  {
+    "barcode": "4015471123789",
+    "item": "TE 240 3D Satin Chrome",
+    "location": "D301"
+  },
+  {
+    "barcode": "4015471128500",
+    "item": "TE 640 3D Bronze Finish Light",
+    "location": "D301"
+  },
+  {
+    "barcode": "4015471128050",
+    "item": "TE 640 3D A8 Satin Chrome Look",
+    "location": "D302"
+  },
+  {
+    "barcode": "4015471133498",
+    "item": "TE 640 3D SZ Blue Galvanized",
+    "location": "D302"
+  },
+  {
+    "barcode": "4015471120047",
+    "item": "TE 541 3D FVZ Polished Nickel",
+    "location": "D303"
+  },
+  {
+    "barcode": "4015471123031",
+    "item": "TE 240 3D Bronze Finish",
+    "location": "D304"
+  },
+  {
+    "barcode": "4015471127343",
+    "item": "TE 640 3D A8 Polished Nickel",
+    "location": "D304"
+  },
+  {
+    "barcode": "4015471101947",
+    "item": "FZP TE 240 3D Blue Galvanized",
+    "location": "D401"
+  },
+  {
+    "barcode": "4015471101947",
+    "item": "FZP TE 240 3D Blue Galvanized",
+    "location": "D401"
+  },
+  {
+    "barcode": "4015471128753",
+    "item": "TE 540 3D A8 Energy Stainless Steel Look",
+    "location": "D402"
+  },
+  {
+    "barcode": "4015471132019",
+    "item": "TE 526/527 3D ST Blue Galvanized",
+    "location": "D402"
+  },
+  {
+    "barcode": "4015471114527",
+    "item": "TE 645 3D SZ Stainless Steel Untreated",
+    "location": "D404"
+  },
+  {
+    "barcode": "4015471130961",
+    "item": "TE 340 3D SZ Blue Galvanized",
+    "location": "D504"
+  },
+  {
+    "barcode": "8054608707511",
+    "item": "AN 170 3D Conf: 127 Satin Nickel",
+    "location": "K101"
+  },
+  {
+    "barcode": "8054608707504",
+    "item": "AN 170 3D Conf: 126 Black",
+    "location": "K102"
+  },
+  {
+    "barcode": "8054608707238",
+    "item": "AN 170 3D Conf: 128 White",
+    "location": "K103"
+  },
+  {
+    "barcode": "8054608707481",
+    "item": "AN 170 3D Conf: 124 Marrone Rustico",
+    "location": "K104"
+  },
+  {
+    "barcode": "8054608707252",
+    "item": "AN 170 3D Conf: 130 Aluminum Chrome",
+    "location": "K105"
+  },
+  {
+    "barcode": "80546087075746",
+    "item": "AN 140 3D FZ",
+    "location": "K106"
+  },
+  {
+    "barcode": "4015471059927",
+    "item": "CO 7029 2D V ULT Yellow Pearl",
+    "location": "L108"
+  },
+  {
+    "barcode": "4015471058388",
+    "item": "CO 7029 2D V ULT Stainless Steel Matte Satin",
+    "location": "L108"
+  },
+  {
+    "barcode": "4015471058418",
+    "item": "CO 7029 2D V ULT MSTS Traffic White",
+    "location": "L108"
+  },
+  {
+    "barcode": "8059606385037",
+    "item": "AN 172 3D Conf: 156 Aluminum Chrome",
+    "location": "L201"
+  },
+  {
+    "barcode": "8059606385020",
+    "item": "AN 172 3D Conf: 155 Black",
+    "location": "L202"
+  },
+  {
+    "barcode": "8059606385068",
+    "item": "AN 172 3D Conf: 159 Satin Nickel",
+    "location": "L203"
+  },
+  {
+    "barcode": "8059606385013",
+    "item": "AN 172 3D Conf: 154 Marrone Rustico",
+    "location": "L204"
+  },
+  {
+    "barcode": "8059606385051",
+    "item": "AN 172 3D Conf: 158 White",
+    "location": "L205"
+  },
+  {
+    "barcode": "4015471128074",
+    "item": "TE 640 3D A8 Stainless Steel Look",
+    "location": "L206"
+  },
+  {
+    "barcode": "4015471091699",
+    "item": "SIKU 3D K 3130",
+    "location": "L206"
+  },
+  {
+    "barcode": "4015471145194",
+    "item": "TE 625 3D a* BW/1 Stainless Steel Matte Satin",
+    "location": "L301"
+  },
+  {
+    "barcode": "4015471133474",
+    "item": "TE 640 3D A8 SZ Blue Galvanized",
+    "location": "L301"
+  },
+  {
+    "barcode": "4015471141424",
+    "item": "TE 540 3D Energy Matte Black",
+    "location": "L302"
+  },
+  {
+    "barcode": "4015471111090",
+    "item": "Universal Frame Long Without Finish",
+    "location": "L302"
+  },
+  {
+    "barcode": "4015471128562",
+    "item": "TE 527 3D Energy Matte Black",
+    "location": "L303"
+  },
+  {
+    "barcode": "4015471093532",
+    "item": "Te 526/527 3D FZ Blue Galvanized",
+    "location": "L303"
+  },
+  {
+    "barcode": "4015471133481",
+    "item": "TE 540 3D A8 SZ Blue Galvanized",
+    "location": "L304"
+  },
+  {
+    "barcode": "4015471131012",
+    "item": "StZA TE 526/527 3D Blue Galvanized",
+    "location": "L304"
+  },
+  {
+    "barcode": "4015471112691",
+    "item": "FZP TE 541 3D FVZ Blue Galvanized",
+    "location": "L305"
+  },
+  {
+    "barcode": "4015471132057",
+    "item": "StZA TE 340 3D Blue Galvanized",
+    "location": "L305"
+  },
+  {
+    "barcode": "4015471116231",
+    "item": "TE 340 3D Energy Satin Chrome Look",
+    "location": "L306"
+  },
+  {
+    "barcode": "4015471128852",
+    "item": "TE 640 3D A8 Energy Satin Chrome Look",
+    "location": "L401"
+  },
+  {
+    "barcode": "4015471114510",
+    "item": "TE 645 3D SZ Blue Galvanized",
+    "location": "L403"
+  },
+  {
+    "barcode": "4015471098957",
+    "item": "FZP TE 540 3D Blue Galvanized",
+    "location": "L404"
+  },
+  {
+    "barcode": "4015471134655",
+    "item": "TE 340 3D SZ Stainless Steel Untreated",
+    "location": "L404"
+  },
+  {
+    "barcode": "4015471143817",
+    "item": "TE 626 3D A8 Radius Bronze Finish Light",
+    "location": "L405"
+  },
+  {
+    "barcode": "4015471100339",
+    "item": "TE 240 3D SZ Blue Galvanized",
+    "location": "L405"
+  },
+  {
+    "barcode": "4015471133528",
+    "item": "TE 541 3D FVZ SZ Blue Galvanized",
+    "location": "L406"
+  },
+  {
+    "barcode": "4015471146504",
+    "item": "TE 540 3D SZ Stainless Steel Untreated",
+    "location": "L406"
+  },
+  {
+    "barcode": "4015471103897",
+    "item": "BAKA Protect 4020 3D Satin Stainless Steel",
+    "location": "L407"
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
+    "barcode": "",
+    "item": "",
+    "location": ""
+  },
+  {
     "barcode": "",
     "item": "",
     "location": ""
