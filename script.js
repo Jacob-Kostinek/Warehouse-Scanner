@@ -1,3 +1,7 @@
+// -------------------------
+// VARIABLES
+// -------------------------
+
 let products = [];
 
 let scanningEnabled = false;
@@ -5,71 +9,353 @@ let scanningEnabled = false;
 let scanTimer;
 
 
-const barcodeInput = document.getElementById("barcodeInput");
+// Scanner elements
 
-const result = document.getElementById("result");
+const barcodeInput =
+  document.getElementById("barcodeInput");
 
-const startButton = document.getElementById("startButton");
+const startButton =
+  document.getElementById("startButton");
 
-const status = document.getElementById("status");
+const scannerStatus =
+  document.getElementById("scannerStatus");
+
+const result =
+  document.getElementById("result");
 
 
+// Menu elements
+
+const menuButton =
+  document.getElementById("menuButton");
+
+const sideMenu =
+  document.getElementById("sideMenu");
+
+const menuOverlay =
+  document.getElementById("menuOverlay");
+
+const menuItems =
+  document.querySelectorAll(".menu-item");
+
+const screens =
+  document.querySelectorAll(".screen");
+
+
+
+// -------------------------
+// LOAD PRODUCTS
+// -------------------------
 
 fetch("products.json")
-  .then(response => response.json())
-  .then(data => {
+
+  .then(function(response) {
+
+    return response.json();
+
+  })
+
+  .then(function(data) {
 
     products = data;
 
     console.log("Products loaded:", products);
 
   })
-  .catch(error => {
 
-    console.error("Error loading products:", error);
+  .catch(function(error) {
+
+    console.error(
+      "Could not load products.json:",
+      error
+    );
+
+    scannerStatus.innerHTML =
+      "Error Loading Products";
 
   });
 
 
 
-startButton.addEventListener("click", function () {
+// -------------------------
+// HAMBURGER MENU
+// -------------------------
 
-  scanningEnabled = true;
+menuButton.addEventListener(
+  "click",
+  function() {
 
-  barcodeInput.focus();
+    openMenu();
 
-  status.innerHTML = "Scanner Ready";
-
-  startButton.innerHTML = "Scanning Active";
-
-  result.innerHTML = `
-    <div class="ready">
-      Ready to Scan...
-    </div>
-  `;
-
-});
+  }
+);
 
 
 
-barcodeInput.addEventListener("input", function () {
+menuOverlay.addEventListener(
+  "click",
+  function() {
 
-  if (scanningEnabled === false) {
-    return;
+    closeMenu();
+
+  }
+);
+
+
+
+function openMenu() {
+
+  sideMenu.classList.add("open");
+
+  menuOverlay.classList.add("show");
+
+}
+
+
+
+function closeMenu() {
+
+  sideMenu.classList.remove("open");
+
+  menuOverlay.classList.remove("show");
+
+}
+
+
+
+// -------------------------
+// SWITCH SCREENS
+// -------------------------
+
+for (
+  let i = 0;
+  i < menuItems.length;
+  i++
+) {
+
+  menuItems[i].addEventListener(
+    "click",
+    function() {
+
+      const screenName =
+        this.getAttribute("data-screen");
+
+
+      showScreen(screenName);
+
+
+      closeMenu();
+
+    }
+  );
+
+}
+
+
+
+function showScreen(screenName) {
+
+  // Hide every screen
+
+  for (
+    let i = 0;
+    i < screens.length;
+    i++
+  ) {
+
+    screens[i].classList.remove(
+      "active-screen"
+    );
+
   }
 
 
-  clearTimeout(scanTimer);
+  // Remove active menu highlight
+
+  for (
+    let i = 0;
+    i < menuItems.length;
+    i++
+  ) {
+
+    menuItems[i].classList.remove(
+      "active"
+    );
+
+  }
 
 
-  scanTimer = setTimeout(function () {
+  // Show selected screen
 
-    let barcode = barcodeInput.value.trim();
+  const selectedScreen =
+    document.getElementById(screenName);
+
+  selectedScreen.classList.add(
+    "active-screen"
+  );
 
 
-    if (barcode.length > 0) {
+  // Highlight selected menu option
 
-      findProduct(barcode);
+  for (
+    let i = 0;
+    i < menuItems.length;
+    i++
+  ) {
+
+    if (
+      menuItems[i].getAttribute(
+        "data-screen"
+      ) === screenName
+    ) {
+
+      menuItems[i].classList.add(
+        "active"
+      );
+
+    }
+
+  }
+
+
+  // If returning to Product Lookup,
+  // restore scanner focus.
+
+  if (
+    screenName === "lookupScreen" &&
+    scanningEnabled === true
+  ) {
+
+    setTimeout(
+      function() {
+
+        barcodeInput.focus();
+
+      },
+      100
+    );
+
+  }
+
+}
+
+
+
+// -------------------------
+// START SCANNING
+// -------------------------
+
+startButton.addEventListener(
+  "click",
+  function() {
+
+    scanningEnabled = true;
+
+    startButton.innerHTML =
+      "Scanning Active";
+
+    scannerStatus.innerHTML =
+      "Scanner Ready";
+
+    result.innerHTML = `
+      <div class="ready-message">
+        Ready to Scan...
+      </div>
+    `;
+
+    barcodeInput.value = "";
+
+    barcodeInput.focus();
+
+  }
+);
+
+
+
+// -------------------------
+// BARCODE INPUT
+// -------------------------
+
+barcodeInput.addEventListener(
+  "input",
+  function() {
+
+    if (
+      scanningEnabled === false
+    ) {
+
+      return;
+
+    }
+
+
+    clearTimeout(scanTimer);
+
+
+    /*
+      Tera scanner types extremely quickly.
+
+      Wait 200ms after input stops.
+      Then treat the completed text
+      as one barcode.
+    */
+
+    scanTimer = setTimeout(
+      function() {
+
+        const barcode =
+          barcodeInput.value.trim();
+
+
+        if (
+          barcode.length > 0
+        ) {
+
+          findProduct(barcode);
+
+        }
+
+
+        barcodeInput.value = "";
+
+        barcodeInput.focus();
+
+      },
+      200
+    );
+
+  }
+);
+
+
+
+// -------------------------
+// SUPPORT ENTER KEY
+// -------------------------
+
+barcodeInput.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key === "Enter"
+    ) {
+
+      clearTimeout(scanTimer);
+
+
+      const barcode =
+        barcodeInput.value.trim();
+
+
+      if (
+        barcode.length > 0
+      ) {
+
+        findProduct(barcode);
+
+      }
+
 
       barcodeInput.value = "";
 
@@ -77,60 +363,68 @@ barcodeInput.addEventListener("input", function () {
 
     }
 
-  }, 150);
-
-});
-
-
-
-barcodeInput.addEventListener("keydown", function (event) {
-
-  if (event.key === "Enter") {
-
-    clearTimeout(scanTimer);
-
-
-    let barcode = barcodeInput.value.trim();
-
-
-    if (barcode.length > 0) {
-
-      findProduct(barcode);
-
-    }
-
-
-    barcodeInput.value = "";
-
-    barcodeInput.focus();
-
   }
+);
 
-});
 
 
+// -------------------------
+// PRODUCT LOOKUP
+// -------------------------
 
 function findProduct(barcode) {
 
-  let product = products.find(function (p) {
-
-    return p.barcode.toString().trim() === barcode;
-
-  });
+  let product = null;
 
 
+  for (
+    let i = 0;
+    i < products.length;
+    i++
+  ) {
 
-  if (product) {
+    const savedBarcode =
+      products[i]
+        .barcode
+        .toString()
+        .trim();
+
+
+    if (
+      savedBarcode === barcode
+    ) {
+
+      product = products[i];
+
+      break;
+
+    }
+
+  }
+
+
+
+  if (
+    product !== null
+  ) {
 
     result.innerHTML = `
 
-      <h2>${product.item}</h2>
+      <div class="product-name">
+        ${product.item}
+      </div>
 
-      <p>PUT IN:</p>
+      <div class="location-label">
+        PUT IN
+      </div>
 
-      <h1>${product.location}</h1>
+      <div class="location">
+        ${product.location}
+      </div>
 
-      <p>Barcode: ${barcode}</p>
+      <div class="barcode-number">
+        Barcode: ${barcode}
+      </div>
 
     `;
 
@@ -140,14 +434,20 @@ function findProduct(barcode) {
 
     result.innerHTML = `
 
-      <h2>Unknown Barcode</h2>
+      <div class="unknown">
+        Unknown Barcode
+      </div>
 
-      <p>${barcode}</p>
+      <div class="barcode-number">
+        ${barcode}
+      </div>
 
     `;
 
   }
 
+
+  // Keep scanner ready
 
   barcodeInput.focus();
 

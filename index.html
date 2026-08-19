@@ -11,280 +11,241 @@
 
   <title>Warehouse Scanner</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 750px;
-      margin: 30px auto;
-      background-color: white;
-      padding: 35px;
-      border-radius: 18px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 22px;
-      margin-bottom: 30px;
-    }
-
-    #startButton {
-      padding: 20px 40px;
-      font-size: 28px;
-      font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      background-color: #222;
-      color: white;
-      margin-bottom: 25px;
-    }
-
-    #status {
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    #barcodeInput {
-      width: 1px;
-      height: 1px;
-      position: absolute;
-      left: -1000px;
-    }
-
-    #result {
-      margin-top: 25px;
-      padding: 30px;
-      min-height: 220px;
-      border-radius: 15px;
-      background-color: #eeeeee;
-    }
-
-    #result h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    #result p {
-      font-size: 26px;
-    }
-
-    #result .location {
-      font-size: 90px;
-      font-weight: bold;
-      margin: 20px;
-    }
-
-    .ready {
-      font-size: 34px;
-      font-weight: bold;
-      margin-top: 70px;
-    }
-  </style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- Top Navigation Bar -->
+  <header class="top-bar">
 
-    <h1>Warehouse Scanner</h1>
-
-    <div class="subtitle">
-      Scan a product barcode to find its location
-    </div>
-
-    <button id="startButton">
-      Start Scanning
+    <button id="menuButton" class="menu-button">
+      ☰
     </button>
 
-    <div id="status">
-      Scanner Not Started
+    <h1 class="top-title">
+      Warehouse System
+    </h1>
+
+  </header>
+
+
+  <!-- Dark background behind menu -->
+  <div id="menuOverlay" class="menu-overlay"></div>
+
+
+  <!-- Hamburger Menu -->
+  <nav id="sideMenu" class="side-menu">
+
+    <div class="menu-header">
+      Warehouse Menu
     </div>
 
-    <input
-      type="text"
-      id="barcodeInput"
-      autocomplete="off"
+    <button
+      class="menu-item active"
+      data-screen="lookupScreen"
+    >
+      Product Lookup
+    </button>
+
+    <button
+      class="menu-item"
+      data-screen="moveScreen"
+    >
+      Move Product
+    </button>
+
+    <button
+      class="menu-item"
+      data-screen="overflowScreen"
+    >
+      Overflow
+    </button>
+
+    <button
+      class="menu-item"
+      data-screen="inventoryScreen"
+    >
+      Inventory
+    </button>
+
+    <button
+      class="menu-item"
+      data-screen="pickingScreen"
+    >
+      Picking
+    </button>
+
+  </nav>
+
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+
+    <!-- PRODUCT LOOKUP -->
+    <section
+      id="lookupScreen"
+      class="screen active-screen"
     >
 
-    <div id="result">
+      <div class="card">
 
-      <div class="ready">
-        Press Start Scanning
+        <h2>Product Lookup</h2>
+
+        <p class="subtitle">
+          Scan a product barcode to find its warehouse location
+        </p>
+
+
+        <button
+          id="startButton"
+          class="primary-button"
+        >
+          Start Scanning
+        </button>
+
+
+        <div
+          id="scannerStatus"
+          class="scanner-status"
+        >
+          Scanner Not Started
+        </div>
+
+
+        <!--
+          Hidden input used by the Tera scanner.
+
+          The scanner acts like a Bluetooth keyboard
+          and types the barcode into this field.
+        -->
+        <input
+          type="text"
+          id="barcodeInput"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        >
+
+
+        <div
+          id="result"
+          class="result-box"
+        >
+
+          <div class="ready-message">
+            Press Start Scanning
+          </div>
+
+        </div>
+
       </div>
 
-    </div>
+    </section>
 
-  </div>
 
 
-  <script>
+    <!-- MOVE PRODUCT -->
+    <section
+      id="moveScreen"
+      class="screen"
+    >
 
-    let products = [];
-    let scanningEnabled = false;
-    let scanTimer;
+      <div class="card">
 
-    const startButton =
-      document.getElementById("startButton");
+        <h2>Move Product</h2>
 
-    const barcodeInput =
-      document.getElementById("barcodeInput");
+        <p class="subtitle">
+          This feature will allow products to be moved to another location.
+        </p>
 
-    const status =
-      document.getElementById("status");
+        <div class="coming-soon">
+          Coming Soon
+        </div>
 
-    const result =
-      document.getElementById("result");
+      </div>
 
+    </section>
 
-    // Load products.json
-    fetch("products.json")
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
 
-        products = data;
 
-        console.log("Products loaded");
+    <!-- OVERFLOW -->
+    <section
+      id="overflowScreen"
+      class="screen"
+    >
 
-      })
-      .catch(function(error) {
+      <div class="card">
 
-        console.log("Could not load products.json");
+        <h2>Overflow</h2>
 
-        status.innerHTML =
-          "Error Loading Products";
+        <p class="subtitle">
+          View and manage overflow warehouse locations.
+        </p>
 
-      });
+        <div class="coming-soon">
+          Coming Soon
+        </div>
 
+      </div>
 
-    // START SCANNING BUTTON
-    startButton.addEventListener("click", function() {
+    </section>
 
-      scanningEnabled = true;
 
-      startButton.innerHTML =
-        "Scanning Active";
 
-      status.innerHTML =
-        "Scanner Ready";
+    <!-- INVENTORY -->
+    <section
+      id="inventoryScreen"
+      class="screen"
+    >
 
-      result.innerHTML =
-        '<div class="ready">Ready to Scan...</div>';
+      <div class="card">
 
-      barcodeInput.value = "";
+        <h2>Inventory</h2>
 
-      barcodeInput.focus();
+        <p class="subtitle">
+          View product quantities and warehouse inventory.
+        </p>
 
-    });
+        <div class="coming-soon">
+          Coming Soon
+        </div>
 
+      </div>
 
-    // Detect scanner typing
-    barcodeInput.addEventListener("input", function() {
+    </section>
 
-      if (scanningEnabled === false) {
-        return;
-      }
 
-      clearTimeout(scanTimer);
 
-      scanTimer = setTimeout(function() {
+    <!-- PICKING -->
+    <section
+      id="pickingScreen"
+      class="screen"
+    >
 
-        let barcode =
-          barcodeInput.value.trim();
+      <div class="card">
 
-        if (barcode.length > 0) {
+        <h2>Picking</h2>
 
-          findProduct(barcode);
+        <p class="subtitle">
+          Pick products for customer orders.
+        </p>
 
-          barcodeInput.value = "";
+        <div class="coming-soon">
+          Coming Soon
+        </div>
 
-          barcodeInput.focus();
+      </div>
 
-        }
+    </section>
 
-      }, 200);
 
-    });
+  </main>
 
 
-    // Also support scanner sending ENTER
-    barcodeInput.addEventListener("keydown", function(event) {
-
-      if (event.key === "Enter") {
-
-        clearTimeout(scanTimer);
-
-        let barcode =
-          barcodeInput.value.trim();
-
-        if (barcode.length > 0) {
-
-          findProduct(barcode);
-
-        }
-
-        barcodeInput.value = "";
-
-        barcodeInput.focus();
-
-      }
-
-    });
-
-
-    function findProduct(barcode) {
-
-      let product = products.find(function(p) {
-
-        return p.barcode.toString().trim()
-          === barcode;
-
-      });
-
-
-      if (product) {
-
-        result.innerHTML =
-          "<h2>" + product.item + "</h2>" +
-          "<p>PUT IN:</p>" +
-          '<div class="location">' +
-          product.location +
-          "</div>" +
-          "<p>Barcode: " +
-          barcode +
-          "</p>";
-
-      }
-
-      else {
-
-        result.innerHTML =
-          "<h2>Unknown Barcode</h2>" +
-          "<p>" +
-          barcode +
-          "</p>";
-
-      }
-
-      barcodeInput.focus();
-
-    }
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
 
